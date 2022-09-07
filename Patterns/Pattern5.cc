@@ -1,15 +1,23 @@
 #include <iostream>
 using namespace std;
-int main()
+void pattern(int n)
 {
-    for(int i=1;i<=5;i++)
+    int i,j;
+    for(i=0;i<n;i++)
     {
-        for(int j=5;j>=i;j--)
+        for(j=0;j<n-i;j++)
         {
-          cout<<"*";
+            cout<<"*";
         }
         cout<<endl;
     }
+}
+int main()
+{
+    int n;
+    cin>>n;
+    pattern(n);
+    return 0;
 }
 /* *****
    ****
