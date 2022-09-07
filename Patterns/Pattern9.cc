@@ -1,34 +1,39 @@
 #include <iostream>
 using namespace std;
+void pattern(int n)
+{
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        for(int k=0;k<n-i-1;k++)
+        {
+            cout<<" ";
+        }
+        for(j=0;j<2*i+1;j++)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    for(i=0;i<n;i++)
+    {
+        for(int k=0;k<i;k++)
+        {
+            cout<<" ";
+        }
+        for(j=0;j<2*(n-i)-1;j++)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
 int main()
 {
-   int k = 0;
-   for (int i = 1; i <=5; i++, k = 0) 
-   {
-      for (int j = 1; j <= 5 - i; j++) 
-      {
-        cout<<"  ";
-      }
-      while (k != 2 * i - 1) 
-      {
-        cout<<"* ";
-        k++;
-      }
-      cout<<endl;
-   }
-   for (int i = 5; i >=1; i--, k = 0) 
-   {
-      for (int j = 1; j <= 5 - i; j++) 
-      {
-        cout<<"  ";
-      }
-      while (k != 2 * i - 1) 
-      {
-        cout<<"* ";
-        k++;
-      }
-      cout<<endl;
-   }
+    int n;
+    cin>>n;
+    pattern(n);
+    return 0;
 }
 /*   *
     ***
