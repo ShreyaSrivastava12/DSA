@@ -1,27 +1,31 @@
 #include <iostream>
 using namespace std;
-int main()
+void pattern(int n)
 {
-   int k = 0;
-   int i=1;
-    while(i!=6)
+    int i,j;
+    for(i=0;i<n;i++)
     {
-        for (int j = 1; j <= i; j++) 
+        for(j=0;j<i+1;j++)
         {
-           cout<<"*";
-        }
-          i++;
-          cout<<endl;
-    }
-       
-    for(int k=1;k<=4;k++)
-    {
-        for(int m=4;m>=k;m--)
-        {
-          cout<<"*";
+            cout<<"*";
         }
         cout<<endl;
     }
+    for(i=0;i<n-1;i++)
+    {
+        for(j=0;j<n-i-1;j++)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+    pattern(n);
+    return 0;
 }
 /* *
    **
